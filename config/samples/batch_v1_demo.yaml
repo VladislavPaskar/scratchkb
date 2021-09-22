@@ -1,0 +1,15 @@
+apiVersion: batch.scratchkb.example.com/v1
+kind: Demo
+metadata:
+  namespace: scratchkb-system
+  name: demo-sample
+spec:
+  replicas: 2
+  matchLabels: demo
+  containerName: nginx
+  containerImage: nginx
+  containerPort: 80
+
+  proxyName: proxy
+  proxyImage: proxy-image
+  proxyPort: 8080
